@@ -1,0 +1,237 @@
+---
+layout: compress
+---
+
+<!doctype html>
+
+{% include origin-type.html %}
+
+{% include lang.html %}
+
+{% if site.theme_mode %}
+{% capture prefer_mode %}data-mode="{{ site.theme_mode }}"{% endcapture %}
+{% endif %}
+
+<!-- `site.alt_lang` can specify a language different from the UI -->
+<html lang="{{ site.alt_lang | default: site.lang }}" {{ prefer_mode }}>
+{% include head.html %}
+
+
+  {% include sidebar.html lang=lang %}
+
+  <div id="main-wrapper" class="d-flex justify-content-center">
+    <div class="container d-flex flex-column px-xxl-5">
+      {% include topbar.html lang=lang %}
+
+      <div class="row flex-grow-1">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="/assets/personal/resume.css">
+
+        <body>
+          <style>
+            a {
+              color: rgb(138, 180, 248);
+            }
+            html[data-mode="light"] a {
+              color: blue;
+            }
+          </style>
+          
+          <!-- Page Container -->
+          <div class="w3-content w3-margin-top" style="max-width:1400px;">
+
+            <!-- The Grid -->
+            <div class="w3-row-padding">
+
+              <!-- Left Column -->
+              <div class="w3-third">
+
+                <div class="w3-card-4 w3-margin-bottom">
+                  <div class="w3-display-container">
+                    <img src="/assets/personal/00141-3953094529.png" style="width:100%" alt="Avatar">
+                  </div>
+                  <div class="w3-container">
+                    <p><h2>Myles Varns</h2></p>
+                    <p>
+                      <i class="fa fa-atom fa-fw w3-margin-right w3-large w3-text-blue"></i>
+                      <a href="https://imgs.xkcd.com/comics/real_programmers.png" target="_blank">Software Engineer</a>
+                    </p>
+                    <p><i class="fa fa-map fa-fw w3-margin-right w3-large w3-text-blue"></i> Missouri, US</p>
+                    <p>
+                      <i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-blue"></i>
+                      <a href="mailto:mylesvarns@protonmail.com">mylesvarns@protonmail.com</a>
+                    </p>
+                    <p>
+                      <i class="fa fa-mobile fa-fw w3-margin-right w3-large w3-text-blue"></i>
+                      <a href="tel:+1-385-482-0013">385-482-0013</a>
+                    </p>
+                  </div>
+                </div>
+
+                <div class="w3-card-4">
+                  <div class="w3-display-container">
+                    <p>
+                      <b>
+                        <div class="w3-container">
+                        <i class="fa fa-code fa-fw w3-margin-right w3-large w3-text-blue"></i>
+                        Skills & Technology
+                        </div>
+                      </b>
+                    </p>
+                    <div class="w3-container">
+                    <ul>
+                      <li>SQL</li>
+                      <li>PowerShell</li>
+                      <li>JavaScript</li>
+                      <li>Shell</li>
+                      <li>Python</li>
+                      <li>GraphQL</li>
+                      <li>REST</li>
+                      <li>SOAP</li>
+                      <li>Ruby</li>
+                      <li>TCP/IP</li>
+                      <li>SDL/SDLC</li>
+                      <li>SSO/IAM</li>
+                      <li>ETL/ELT</li>
+                      <li>CRM</li>
+                      <li>Automation</li>
+                      <li>Metasploit</li>
+                      <li>AWS</li>
+                      <li>OPNsense</li>
+                      <li>pfSense</li>
+                      <li>IDS/IPS</li>
+                      <li>Wireshark</li>
+                      <li>Containerization</li>
+                      <li>Data Visualization</li>
+                      <li>Jira/Confluence Agile Project Management</li>
+                      <li>Linux Server Administration</li>
+                      <li>Windows Server</li>
+                      <li>Proxmox Hypervisor</li>
+                    </ul>
+                    </div>
+                  </div>
+                  <br>
+                </div>
+
+                <!-- End Left Column -->
+              </div>
+
+              <!-- Right Column -->
+              <div class="w3-twothird">
+                <div class="w3-container w3-card w3-margin-bottom">
+                  <h2 class=" w3-padding-16"><i
+                      class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-blue"></i>Work Experience</h2>
+                  <div class="w3-container">
+                    <h5 class="w3-opacity"><b>Senior Integration Engineer | <a href="https://www.immersivelabs.com" target="_blank">Immersive Labs</a></b></h5>
+                    <h6 class="w3-text-blue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jan 2023 - Feb 2024</h6>
+                    <p>Operated as the SME and primary engineer in researching and developing code related to the integration of platform 
+                      features and data into a customer’s internal environment and security relate tooling. Responsible for designing, implementing,
+                      and maintaining custom integration pipelines.
+                    </p>
+                    <hr>
+                  </div>
+                  <div class="w3-container">
+                    <h5 class="w3-opacity"><b>Senior Integration Consultant | <a href="https://www.immersivelabs.com" target="_blank">Immersive Labs</a></b></h5>
+                    <h6 class="w3-text-blue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jan 2022 - Jan 2023</h6>
+                    <p>Operated as the advisor and technical resource for external customers, internal leaders and product engineering teams.
+                      Implementated and maintened processes for SSO, flat-file and GraphQL/xAPI based integrations.
+                    </p>
+                    <hr>
+                  </div>
+                  <div class="w3-container">
+                    <h5 class="w3-opacity"><b>DevOps Engineer | <a href="https://www.pluralsight.com" target="_blank">Pluralsight</a></b></h5>
+                    <h6 class="w3-text-blue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Mar 2021 - Dec 2021</h6>
+                    <p>Handled procurement and development of new tooling and processes with third parties to increase integration efficiency
+                       and to expand integration offerings. Facilitated the handoff of integration responsibilities from the data team.
+                    </p>
+                    <hr>
+                  </div>
+                  <div class="w3-container">
+                    <h5 class="w3-opacity"><b>Senior Integration Consultant | <a href="https://www.pluralsight.com" target="_blank">Pluralsight</a></b></h5>
+                    <h6 class="w3-text-blue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Aug 2019 - Mar 2021</h6>
+                    <p>Operated as an advisor and technical resource for internal and external customers. Responsible for designing, implementing,
+                       and maintaining SSO, flat-file data feeds, and custom API integrations with customers and other third parties.
+                    </p>
+                    <hr>
+                  </div>
+                  <div class="w3-container">
+                    <h5 class="w3-opacity"><b>Consultant | <a href="https://dealersocket.com/" target="_blank">DealerSocket</a></b></h5>
+                    <h6 class="w3-text-blue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Dec 2018 - Jul 2019</h6>
+                    <p>Act as a liaison for customer to internal departments such as Data and Engineering. Communicate with and educate customer and
+                       internal employees on product functionality and various integrations to increase productivity.                      
+                    </p>
+                    <hr>
+                  </div>
+                  <div class="w3-container">
+                    <h5 class="w3-opacity"><b>Senior Data Engineer | <a href="https://dealersocket.com/" target="_blank">DealerSocket</a></b></h5>
+                    <h6 class="w3-text-blue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jan 2016 - Dec 2018</h6>
+                    <p>Experience in designing and implementing custom code for internal Engineering and Product departments by developing Stored
+                       Procs, scripts, ETL processes (DTS and SSIS), and other code to optimize productivity through automation.
+                    </p><br>
+                  </div>
+                </div>
+                <div class="w3-container w3-card ">
+                  <h2 class=" w3-padding-16"><i
+                      class="fa fa-school fa-fw w3-margin-right w3-xxlarge w3-text-blue"></i>Education</h2>
+                  <div class="w3-container">
+                    <h5 class="w3-opacity"><b>Masters of Science Cybersecurity and Information Assurance | <a href="https://www.wgu.edu/" target="_blank">Western Governors University</a></b></h5>
+                    <h6 class="w3-text-blue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2021</h6>
+                    <p> Focus on Governance, Risk, and Compliance (GRC), Cloud & On-Prem Security, Penetration Testing, and Enterprise Architecture Design</p>
+                    <hr>
+                  </div>
+                  <div class="w3-container">
+                    <h5 class="w3-opacity"><b>Bachelors of Science Cybersecurity | <a href="https://www.norwich.edu/" target="_blank">Norwich University</a></b></h5>
+                    <h6 class="w3-text-blue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2018-2020</h6>
+                    <p> Dual track focus with 'Computer Forensics and Vulnerability Management' and 'Information Warfare and Security Management' concentrations</p>
+                    <hr>
+                  </div>
+                </div>
+
+                <!-- End Right Column -->
+              </div>
+
+              <!-- End Grid -->
+            </div>
+
+            <!-- End Page Container -->
+          </div>
+      </div>
+      <div class="row">
+        <!-- tail -->
+        <div id="tail-wrapper" class="col-12 col-lg-11 col-xl-9 px-md-4">
+          {% for _include in layout.tail_includes %}
+          {% assign _include_path = _include | append: '.html' %}
+          {% include {{ _include_path }} lang=lang %}
+          {% endfor %}
+
+          {% include_cached footer.html lang=lang %}
+        </div>
+      </div>
+
+      {% include_cached search-results.html lang=lang %}
+    </div>
+
+    <aside aria-label="Scroll to Top">
+      <button id="back-to-top" type="button" class="btn btn-lg btn-box-shadow">
+        <i class="fas fa-angle-up"></i>
+      </button>
+    </aside>
+  </div>
+
+  <div id="mask"></div>
+
+  {% if site.pwa.enabled %}
+  {% include_cached notification.html lang=lang %}
+  {% endif %}
+
+  <!-- JavaScripts -->
+
+  {% include js-selector.html %}
+
+  {% if page.mermaid %}
+  {% include mermaid.html %}
+  {% endif %}
+
+  {% include_cached search-loader.html %}
+</body>
+</html>
